@@ -46,11 +46,11 @@
     var geometry = new THREE.BoxGeometry(3, 3, 3);
     var material = new THREE.MeshNormalMaterial({ color: 0x6699FF });
     var box = new THREE.Mesh(geometry, material);
-    box.position.set(-5,-5,5); //位置を指定
+    box.position.set(-5,-6,5); //位置を指定
     scene.add(box);   // シーンに追加
 
      //球
-     var sphereGeometry = new THREE.SphereGeometry( 0,5, 32, 32 );
+     var sphereGeometry = new THREE.SphereGeometry( 0,5, 40, 40 );
      var sphereMaterial = new THREE.MeshPhongMaterial( {color: 0x00f0ff,wireframe:true} );
      var sphere = new THREE.Mesh( sphereGeometry,sphereMaterial );
      sphere.position.set(0,0,-5);
@@ -70,6 +70,17 @@
      cone.position.set(0,-10,-5);
      scene.add(cone);
 
+     //角柱
+     var cylinderGeometry=new THREE.CylinderGeometry(2,4,7,8);
+     var cylinderMaterial=new THREE.MeshNormalMaterial({color:0x6699FF});
+     var cylinder=new THREE.Mesh(cylinderGeometry,cylinderMaterial);
+     cylinder.position.set(-15,2,-5);
+     scene.add(cylinder);var cylinderGeometry=new THREE.CylinderGeometry(5,2,7,8);
+     var cylinderMaterial=new THREE.MeshPhongMaterial({color:0x00ff00});
+     var cylinder=new THREE.Mesh(cylinderGeometry,cylinderMaterial);
+     cylinder.position.set(-15,-5,-5);
+     scene.add(cylinder);
+
      //なんかクネクネしてるやつ
      var torusKnotGeometry=new THREE.TorusKnotGeometry(1.5,0.3,20,6,3,2);
      var torusKnotMaterial=new THREE.MeshPhongMaterial({color:0xffffff,wireframe:true});
@@ -86,12 +97,11 @@
       box.rotation.y += 0.01;
 
      //球の回転
-     sphere.rotation.x +=0.01;
-     sphere.rotation.y +=0.01;
+     sphere.rotation.x +=0.02;
+     sphere.rotation.y +=0.02;
 
      //ドーナツの回転
-     /*torus.rotation.x +=0.01;
-     torus.rotation.y +=0.01;*/
+     torus.rotation.y +=0.05;
 
      //なんかクネクネしてるやつ
      torusKnot.rotation.x +=0.01;
