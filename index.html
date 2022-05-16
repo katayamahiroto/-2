@@ -43,11 +43,11 @@
     scene.add(axisHelper);
 
     // 箱を作成
-    //var geometry = new THREE.BoxGeometry(1, 1, 1);
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    //var box = new THREE.Mesh(geometry, material);
-    //box.position.set(0,0,0); //位置を指定
-    //scene.add(box);   // シーンに追加
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+    var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+    var box = new THREE.Mesh(geometry, material);
+    box.position.set(0,0,0); //位置を指定
+    scene.add(box);   // シーンに追加
   
     //角錐
     //var coneGeometry=new THREE.ConeGeometry(0.5,1,5);
@@ -56,10 +56,10 @@
     //cone.position(0,0,-5);
     //scene.add(cone);
     
-    const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+    /*const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
     const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
     const cylinder = new THREE.Mesh( geometry, material );
-    scene.add( cylinder );
+    scene.add( cylinder );*/
     
     // 初回実行
     var update = function() {
